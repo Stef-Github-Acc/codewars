@@ -1,5 +1,5 @@
 def high_and_low(numbers)
-  return numbers.split.minmax_by{|i| i.to_i}.reverse.join(' ')
+	numbers.split.map(&:to_i).minmax.reverse.join(' ')
 end
 
 #One needs to split the string into numbers. .split will return an array of strings, not numbers, so we will need to translate the strings to integers using (to_i)
